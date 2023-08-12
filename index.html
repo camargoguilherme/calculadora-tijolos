@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Tijolos de Gesso</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Calculadora de Tijolos de Gesso</h5>
+        </div>
+        <div class="card-body" id="calculator">
+          <div class="form-group column col-12">
+            <div class="form-group column col-6">
+              <label for="wallWidth" class="col-4 col-form-label"
+                >Largura da parede (m)</label
+              >
+              <div class="col-8">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="wallWidth"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group column col-6">
+              <label for="wallHeight" class="col-4 col-form-label"
+                >Altura da parede (m)</label
+              >
+              <div class="col-8">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="wallHeight"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-group column col-12">
+            <div class="form-group column col-6">
+              <label for="windowWidth" class="col-4 col-form-label"
+                >Largura da janela (cm)</label
+              >
+              <div class="col-8">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="windowWidth"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group column col-6">
+              <label for="windowHeight" class="col-4 col-form-label"
+                >Altura da janela (cm)</label
+              >
+              <div class="col-8">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="windowHeight"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-group column col-12">
+            <div class="form-group column col-6">
+              <label for="brickWidth" class="col-4 col-form-label"
+                >Largura do tijolo (cm)</label
+              >
+              <div class="col-8">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="brickWidth"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group column col-6">
+              <label for="brickHeight" class="col-4 col-form-label"
+                >Altura do tijolo (cm)</label
+              >
+              <div class="col-8">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="brickHeight"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" id="calculateButton">Calcular</button>
+          <div class="result mt-3" id="result" style="display: none">
+            <p>Área total: <span id="netWallArea"></span> m²</p>
+            <p>Área do tijolo: <span id="brickArea"></span> cm²</p>
+            <p>
+              Quantidade estimada de tijolos de gesso:
+              <span id="bricksCount"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
